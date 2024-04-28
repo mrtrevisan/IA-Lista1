@@ -1,0 +1,44 @@
+Cidade Atual:  a 
+
+Procurando novos destinos: 
+	Encontrada rota de a até b
+		Rota adicionada às possibilidades: ('a', 'b', 7)
+	Encontrada rota de a até c
+		Rota adicionada às possibilidades: ('a', 'c', 6)
+	Encontrada rota de a até d
+		Rota adicionada às possibilidades: ('a', 'd', 14)
+
+	Possíveis caminhos:  [('a', 'b', 7), ('a', 'c', 6), ('a', 'd', 14)]
+	Melhor escolha:  ('a', 'c', 6) 
+
+Cidade Atual:  c 
+
+Procurando novos destinos: 
+	Encontrada rota de c até j
+		Rota adicionada às possibilidades: ('c', 'j', 3)
+
+	Possíveis caminhos:  [('c', 'j', 3)]
+	Melhor escolha:  ('c', 'j', 3) 
+
+Cidade Atual:  j 
+
+Procurando novos destinos: 
+	Encontrada rota de j até l
+		Rota adicionada às possibilidades: ('j', 'l', 4)
+
+	Possíveis caminhos:  [('j', 'l', 4)]
+	Melhor escolha:  ('j', 'l', 4) 
+
+Cidade Atual:  l 
+
+Procurando novos destinos: 
+	Encontrada rota de l até k
+		Rota adicionada às possibilidades: ('l', 'k', 0)
+
+	Possíveis caminhos:  [('l', 'k', 0)]
+	Melhor escolha:  ('l', 'k', 0) 
+
+Objetivo encontrado!
+
+Existe caminho de a para k.
+a -> c -> j -> l -> k

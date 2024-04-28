@@ -1,0 +1,40 @@
+Cidade Atual:  a 
+
+Procurando novos destinos: 
+	Encontrado voo de a até b
+		Voo adicionado às possibilidades: ('a', 'b', 1)
+	Encontrado voo de a até c
+		Voo adicionado às possibilidades: ('a', 'c', 9)
+	Encontrado voo de a até d
+		Voo adicionado às possibilidades: ('a', 'd', 4)
+
+	Possíveis caminhos:  [('a', 'b', 1), ('a', 'c', 9), ('a', 'd', 4)]
+	Melhor escolha:  ('a', 'b', 1) 
+
+Cidade Atual:  b 
+
+Procurando novos destinos: 
+	Encontrado voo de b até c
+		Voo adicionado às possibilidades: ('b', 'c', 7)
+	Encontrado voo de b até e
+		Voo adicionado às possibilidades: ('b', 'e', 6)
+	Encontrado voo de b até f
+		Voo adicionado às possibilidades: ('b', 'f', 1)
+
+	Possíveis caminhos:  [('b', 'c', 7), ('b', 'e', 6), ('b', 'f', 1)]
+	Melhor escolha:  ('b', 'f', 1) 
+
+Cidade Atual:  f 
+
+Procurando novos destinos: 
+	Encontrado voo de f até h
+		Voo adicionado às possibilidades: ('f', 'h', 4)
+
+	Possíveis caminhos:  [('f', 'h', 4)]
+	Melhor escolha:  ('f', 'h', 4) 
+
+Objetivo encontrado!
+
+Caminho encontrado de a para h!
+a -> b -> f -> h
+Custo total:  6
