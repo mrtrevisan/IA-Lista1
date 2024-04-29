@@ -1,44 +1,37 @@
-Cidade Atual:  a 
 
-Procurando novos destinos: 
-	Encontrada rota de a até b
-		Rota adicionada às possibilidades: ('a', 'b', 7)
-	Encontrada rota de a até c
-		Rota adicionada às possibilidades: ('a', 'c', 6)
-	Encontrada rota de a até d
-		Rota adicionada às possibilidades: ('a', 'd', 14)
+Fila:  [([a, []], 0)]
 
-	Possíveis caminhos:  [('a', 'b', 7), ('a', 'c', 6), ('a', 'd', 14)]
-	Melhor escolha:  ('a', 'c', 6) 
+Fechados:  [] 
 
-Cidade Atual:  c 
+Melhor escolha:  [a, []]  Heurística:  0 
 
-Procurando novos destinos: 
-	Encontrada rota de c até j
-		Rota adicionada às possibilidades: ('c', 'j', 3)
 
-	Possíveis caminhos:  [('c', 'j', 3)]
-	Melhor escolha:  ('c', 'j', 3) 
+Fila:  [([c, ['a']], 6), ([b, ['a']], 7), ([d, ['a']], 14)]
 
-Cidade Atual:  j 
+Fechados:  [([a, []], 0)] 
 
-Procurando novos destinos: 
-	Encontrada rota de j até l
-		Rota adicionada às possibilidades: ('j', 'l', 4)
+Melhor escolha:  [c, ['a']]  Heurística:  6 
 
-	Possíveis caminhos:  [('j', 'l', 4)]
-	Melhor escolha:  ('j', 'l', 4) 
 
-Cidade Atual:  l 
+Fila:  [([j, ['a', 'c']], 3), ([b, ['a']], 7), ([d, ['a']], 14)]
 
-Procurando novos destinos: 
-	Encontrada rota de l até k
-		Rota adicionada às possibilidades: ('l', 'k', 0)
+Fechados:  [([a, []], 0), ([c, ['a']], 6)] 
 
-	Possíveis caminhos:  [('l', 'k', 0)]
-	Melhor escolha:  ('l', 'k', 0) 
+Melhor escolha:  [j, ['a', 'c']]  Heurística:  3 
 
-Objetivo encontrado!
+
+Fila:  [([l, ['a', 'c', 'j']], 4), ([b, ['a']], 7), ([d, ['a']], 14)]
+
+Fechados:  [([a, []], 0), ([c, ['a']], 6), ([j, ['a', 'c']], 3)] 
+
+Melhor escolha:  [l, ['a', 'c', 'j']]  Heurística:  4 
+
+
+Fila:  [([k, ['a', 'c', 'j', 'l']], 0), ([b, ['a']], 7), ([d, ['a']], 14)]
+
+Fechados:  [([a, []], 0), ([c, ['a']], 6), ([j, ['a', 'c']], 3), ([l, ['a', 'c', 'j']], 4)] 
+
+Melhor escolha:  [k, ['a', 'c', 'j', 'l']]  Heurística:  0 
 
 Existe caminho de a para k.
 a -> c -> j -> l -> k

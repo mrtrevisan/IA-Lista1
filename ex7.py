@@ -1,10 +1,11 @@
 class Estado:
-    def __init__(self, cidade, caminho):
+    def __init__(self, cidade, caminho, custo_acumulado):
         self.cidade = cidade
         self.caminho = caminho
+        self.custo_acumulado = custo_acumulado
 
     def __str__(self):
-        return f"[{self.cidade}, {self.caminho}]"
+        return f"[{self.cidade}, {self.caminho}, {self.custo_acumulado}]"
 
     def __repr__(self):
         return str(self)
@@ -42,12 +43,12 @@ heuristica = {
     'k': 0, 'l': 4
 }
 
-def h(x):
-    return heuristica[x]
+def h(x, c):
+    return heuristica[x] + c
 
 def busca_melhor_escolha(origem, destino):
     fila = []
-    fila.append((Estado(origem, []), 0))
+    fila.append((Estado(origem, [], 0), 0))
     fechados = []
 
     while fila:
@@ -65,9 +66,10 @@ def busca_melhor_escolha(origem, destino):
             if r.origem == e.cidade and r.destino not in e.caminho:
                 novo_estado = Estado(
                     r.destino, 
-                    e.caminho + [e.cidade], 
+                    e.caminho + [e.cidade],
+                    e.custo_acumulado + r.custo
                 )
-                fila.append((novo_estado, h(r.destino)))
+                fila.append((novo_estado, h(r.destino, novo_estado.custo_acumulado)))
 
         fila.sort(key=lambda t : t[1])
     else:
