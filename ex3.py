@@ -68,14 +68,17 @@ class Estado:
             and self.repolho == other.repolho
         )
 
-# Função para buscar a solução usando busca em largura
-def busca_largura():
+def busca_profundidade():
     estado_inicial = Estado('e', 'e', 'e', 'e', None)
     fila = []
     fila.append(estado_inicial)
+    fechados = []
 
-    for e in fila:
-        print("\nFila: ", fila, "\n")
+    while fila:
+        print("\nFila: ", fila)
+        print("\nFechados: ", fechados, "\n")
+        e = fila.pop(0)
+        fechados.append(e)
 
         print("Abrindo Estado: ", e, "\n")
 
@@ -85,11 +88,13 @@ def busca_largura():
         
         print("Gerando estados filhos: ")
         for next in e.gen_next():
-            if next not in fila:
+            if next not in fila and next not in fechados:
                 print(f"\tEnfileirando estado: {next}")
-                fila.append(next)
+                fila.insert(0, next)
             else:
                 print(f"\t{next} já está na fila: ")
+        print("\n-----")
+        print("-----")
     else:
         return None
 
@@ -102,7 +107,7 @@ def imprimir_caminho(caminho):
         print(f"Posição do Repolho: {'Esquerda' if estado.repolho == 'e' else 'Direita'}")
         print("")
 
-caminho = busca_largura()
+caminho = busca_profundidade()
 if caminho:
     print("Caminho para solução:")
     imprimir_caminho(caminho)

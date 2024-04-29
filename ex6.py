@@ -22,7 +22,7 @@ heuristica = {
 def h(cidade):
     return heuristica[cidade]
 
-def busca_gulosa(origem, destino):
+def busca_melhor_escolha(origem, destino):
     caminho = []
 
     cidade_atual = origem
@@ -59,7 +59,7 @@ def busca_gulosa(origem, destino):
 # Execução
 origem = 'a'
 destino = 'k'
-caminho = busca_gulosa(origem, destino)
+caminho = busca_melhor_escolha(origem, destino)
 
 if caminho:
     print(f"Existe caminho de {origem} para {destino}.")

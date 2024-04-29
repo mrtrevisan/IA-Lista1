@@ -1,5 +1,7 @@
 
-Fila:  [('a', [])] 
+Fila:  [('a', [])]
+
+Fechados:  [] 
 
 Cidade Atual:  a 
 
@@ -11,7 +13,12 @@ Procurando novos destinos:
 	Encontrado voo de a até d
 		Enfileirando cidade: d
 
-Fila:  [('a', []), ('b', ['a']), ('d', ['a'])] 
+-----
+-----
+
+Fila:  [('b', ['a']), ('d', ['a'])]
+
+Fechados:  [('a', [])] 
 
 Cidade Atual:  b 
 
@@ -21,7 +28,12 @@ Procurando novos destinos:
 	Encontrado voo de b até f
 		Enfileirando cidade: f
 
-Fila:  [('a', []), ('b', ['a']), ('d', ['a']), ('e', ['a', 'b']), ('f', ['a', 'b'])] 
+-----
+-----
+
+Fila:  [('d', ['a']), ('e', ['a', 'b']), ('f', ['a', 'b'])]
+
+Fechados:  [('a', []), ('b', ['a'])] 
 
 Cidade Atual:  d 
 
@@ -29,7 +41,12 @@ Procurando novos destinos:
 	Encontrado voo de d até j
 		Enfileirando cidade: j
 
-Fila:  [('a', []), ('b', ['a']), ('d', ['a']), ('e', ['a', 'b']), ('f', ['a', 'b']), ('j', ['a', 'd'])] 
+-----
+-----
+
+Fila:  [('e', ['a', 'b']), ('f', ['a', 'b']), ('j', ['a', 'd'])]
+
+Fechados:  [('a', []), ('b', ['a']), ('d', ['a'])] 
 
 Cidade Atual:  e 
 
@@ -39,13 +56,23 @@ Procurando novos destinos:
 	Encontrado voo de e até l
 		Enfileirando cidade: l
 
-Fila:  [('a', []), ('b', ['a']), ('d', ['a']), ('e', ['a', 'b']), ('f', ['a', 'b']), ('j', ['a', 'd']), ('k', ['a', 'b', 'e']), ('l', ['a', 'b', 'e'])] 
+-----
+-----
+
+Fila:  [('f', ['a', 'b']), ('j', ['a', 'd']), ('k', ['a', 'b', 'e']), ('l', ['a', 'b', 'e'])]
+
+Fechados:  [('a', []), ('b', ['a']), ('d', ['a']), ('e', ['a', 'b'])] 
 
 Cidade Atual:  f 
 
 Procurando novos destinos: 
 
-Fila:  [('a', []), ('b', ['a']), ('d', ['a']), ('e', ['a', 'b']), ('f', ['a', 'b']), ('j', ['a', 'd']), ('k', ['a', 'b', 'e']), ('l', ['a', 'b', 'e'])] 
+-----
+-----
+
+Fila:  [('j', ['a', 'd']), ('k', ['a', 'b', 'e']), ('l', ['a', 'b', 'e'])]
+
+Fechados:  [('a', []), ('b', ['a']), ('d', ['a']), ('e', ['a', 'b']), ('f', ['a', 'b'])] 
 
 Cidade Atual:  j 
 

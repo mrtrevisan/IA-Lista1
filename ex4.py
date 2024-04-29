@@ -23,9 +23,14 @@ voos = {
 def busca_largura(origem, destino):
     fila = []
     fila.append((origem, []))
+    fechados = []
 
-    for c, caminho in fila:
-        print("\nFila: ", fila, "\n")
+    while fila:
+        print("\nFila: ", fila)
+        print("\nFechados: ", fechados, "\n")
+
+        c, caminho = fila.pop(0)
+        fechados.append((c, caminho))
 
         print("Cidade Atual: ", c, "\n")
 
@@ -34,15 +39,17 @@ def busca_largura(origem, destino):
             return caminho + [c]
         
         print("Procurando novos destinos: ")
-        for num, (cidade_origem, cidade_destino) in voos.items():
+        for _, (cidade_origem, cidade_destino) in voos.items():
             if (cidade_origem == c):
                 print(f"\tEncontrado voo de {cidade_origem} até {cidade_destino}")
 
-                if (cidade_destino not in caminho and cidade_destino not in [tupla[0] for tupla in fila]):
+                if (cidade_destino not in caminho and cidade_destino not in [tupla[0] for tupla in fila + fechados]):
                     print(f"\t\tEnfileirando cidade: {cidade_destino}")
                     fila.append((cidade_destino, caminho + [c]))
                 else:
                     print(f"\t\tCidade {cidade_destino} já foi visitada ou já está na fila.")
+        print("\n-----")
+        print("-----")
     else:
         return None
     

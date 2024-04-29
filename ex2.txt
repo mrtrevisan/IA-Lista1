@@ -1,5 +1,7 @@
 
-Fila:  [[0, 0]] 
+Fila:  [[0, 0]]
+
+Fechados:  [] 
 
 Abrindo Estado:  [0, 0] 
 
@@ -7,7 +9,12 @@ Gerando estados filhos:
 	Enfileirando estado: [3, 0]
 	Enfileirando estado: [0, 4]
 
-Fila:  [[0, 0], [3, 0], [0, 4]] 
+-----
+-----
+
+Fila:  [[3, 0], [0, 4]]
+
+Fechados:  [[0, 0]] 
 
 Abrindo Estado:  [3, 0] 
 
@@ -16,7 +23,12 @@ Gerando estados filhos:
 	[0, 0] já está na fila: 
 	Enfileirando estado: [0, 3]
 
-Fila:  [[0, 0], [3, 0], [0, 4], [3, 4], [0, 3]] 
+-----
+-----
+
+Fila:  [[0, 4], [3, 4], [0, 3]]
+
+Fechados:  [[0, 0], [3, 0]] 
 
 Abrindo Estado:  [0, 4] 
 
@@ -25,7 +37,12 @@ Gerando estados filhos:
 	[0, 0] já está na fila: 
 	Enfileirando estado: [3, 1]
 
-Fila:  [[0, 0], [3, 0], [0, 4], [3, 4], [0, 3], [3, 1]] 
+-----
+-----
+
+Fila:  [[3, 4], [0, 3], [3, 1]]
+
+Fechados:  [[0, 0], [3, 0], [0, 4]] 
 
 Abrindo Estado:  [3, 4] 
 
@@ -33,7 +50,12 @@ Gerando estados filhos:
 	[0, 4] já está na fila: 
 	[3, 0] já está na fila: 
 
-Fila:  [[0, 0], [3, 0], [0, 4], [3, 4], [0, 3], [3, 1]] 
+-----
+-----
+
+Fila:  [[0, 3], [3, 1]]
+
+Fechados:  [[0, 0], [3, 0], [0, 4], [3, 4]] 
 
 Abrindo Estado:  [0, 3] 
 
@@ -43,7 +65,12 @@ Gerando estados filhos:
 	[0, 0] já está na fila: 
 	[3, 0] já está na fila: 
 
-Fila:  [[0, 0], [3, 0], [0, 4], [3, 4], [0, 3], [3, 1], [3, 3]] 
+-----
+-----
+
+Fila:  [[3, 1], [3, 3]]
+
+Fechados:  [[0, 0], [3, 0], [0, 4], [3, 4], [0, 3]] 
 
 Abrindo Estado:  [3, 1] 
 
@@ -53,7 +80,12 @@ Gerando estados filhos:
 	[3, 0] já está na fila: 
 	[0, 4] já está na fila: 
 
-Fila:  [[0, 0], [3, 0], [0, 4], [3, 4], [0, 3], [3, 1], [3, 3], [0, 1]] 
+-----
+-----
+
+Fila:  [[3, 3], [0, 1]]
+
+Fechados:  [[0, 0], [3, 0], [0, 4], [3, 4], [0, 3], [3, 1]] 
 
 Abrindo Estado:  [3, 3] 
 
@@ -63,7 +95,12 @@ Gerando estados filhos:
 	[3, 0] já está na fila: 
 	Enfileirando estado: [2, 4]
 
-Fila:  [[0, 0], [3, 0], [0, 4], [3, 4], [0, 3], [3, 1], [3, 3], [0, 1], [2, 4]] 
+-----
+-----
+
+Fila:  [[0, 1], [2, 4]]
+
+Fechados:  [[0, 0], [3, 0], [0, 4], [3, 4], [0, 3], [3, 1], [3, 3]] 
 
 Abrindo Estado:  [0, 1] 
 
@@ -73,7 +110,12 @@ Gerando estados filhos:
 	[0, 0] já está na fila: 
 	Enfileirando estado: [1, 0]
 
-Fila:  [[0, 0], [3, 0], [0, 4], [3, 4], [0, 3], [3, 1], [3, 3], [0, 1], [2, 4], [1, 0]] 
+-----
+-----
+
+Fila:  [[2, 4], [1, 0]]
+
+Fechados:  [[0, 0], [3, 0], [0, 4], [3, 4], [0, 3], [3, 1], [3, 3], [0, 1]] 
 
 Abrindo Estado:  [2, 4] 
 
@@ -83,7 +125,12 @@ Gerando estados filhos:
 	Enfileirando estado: [2, 0]
 	[3, 3] já está na fila: 
 
-Fila:  [[0, 0], [3, 0], [0, 4], [3, 4], [0, 3], [3, 1], [3, 3], [0, 1], [2, 4], [1, 0], [2, 0]] 
+-----
+-----
+
+Fila:  [[1, 0], [2, 0]]
+
+Fechados:  [[0, 0], [3, 0], [0, 4], [3, 4], [0, 3], [3, 1], [3, 3], [0, 1], [2, 4]] 
 
 Abrindo Estado:  [1, 0] 
 
@@ -93,7 +140,12 @@ Gerando estados filhos:
 	[0, 0] já está na fila: 
 	[0, 1] já está na fila: 
 
-Fila:  [[0, 0], [3, 0], [0, 4], [3, 4], [0, 3], [3, 1], [3, 3], [0, 1], [2, 4], [1, 0], [2, 0], [1, 4]] 
+-----
+-----
+
+Fila:  [[2, 0], [1, 4]]
+
+Fechados:  [[0, 0], [3, 0], [0, 4], [3, 4], [0, 3], [3, 1], [3, 3], [0, 1], [2, 4], [1, 0]] 
 
 Abrindo Estado:  [2, 0] 
 
@@ -103,7 +155,12 @@ Gerando estados filhos:
 	[0, 0] já está na fila: 
 	Enfileirando estado: [0, 2]
 
-Fila:  [[0, 0], [3, 0], [0, 4], [3, 4], [0, 3], [3, 1], [3, 3], [0, 1], [2, 4], [1, 0], [2, 0], [1, 4], [0, 2]] 
+-----
+-----
+
+Fila:  [[1, 4], [0, 2]]
+
+Fechados:  [[0, 0], [3, 0], [0, 4], [3, 4], [0, 3], [3, 1], [3, 3], [0, 1], [2, 4], [1, 0], [2, 0]] 
 
 Abrindo Estado:  [1, 4] 
 
@@ -113,7 +170,12 @@ Gerando estados filhos:
 	[1, 0] já está na fila: 
 	Enfileirando estado: [3, 2]
 
-Fila:  [[0, 0], [3, 0], [0, 4], [3, 4], [0, 3], [3, 1], [3, 3], [0, 1], [2, 4], [1, 0], [2, 0], [1, 4], [0, 2], [3, 2]] 
+-----
+-----
+
+Fila:  [[0, 2], [3, 2]]
+
+Fechados:  [[0, 0], [3, 0], [0, 4], [3, 4], [0, 3], [3, 1], [3, 3], [0, 1], [2, 4], [1, 0], [2, 0], [1, 4]] 
 
 Abrindo Estado:  [0, 2] 
 

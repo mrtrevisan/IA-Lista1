@@ -1,53 +1,91 @@
+class Estado:
+    def __init__(self, cidade, caminho, custo_acumulado):
+        self.cidade = cidade
+        self.caminho = caminho
+        self.custo_acumulado = custo_acumulado
+
+    def __str__(self):
+        return f"[{self.cidade}, {self.caminho}, {self.custo_acumulado}]"
+
+    def __repr__(self):
+        return str(self)
+
+class Voo:
+    def __init__(self, origem, destino, custo):
+        self.origem = origem
+        self.destino = destino
+        self.custo = custo
+    
+    def __str__(self):
+        return f"[{self.origem}, {self.destino}, {self.custo}]"
+
+    def __repr__(self):
+        return str(self)
+
 voos = [
-    ('a', 'b', 1), 
-    ('a', 'c', 9), 
-    ('a', 'd', 4), 
-    ('b', 'c', 7), 
-    ('b', 'e', 6),
-    ('b', 'f', 1),
-    ('c', 'f', 7), 
-    ('d', 'f', 4), 
-    ('d', 'g', 5), 
-    ('e', 'h', 9), 
-    ('f', 'h', 4),
-    ('g', 'h', 1)
+    Voo('a', 'b', 1), 
+    Voo('a', 'c', 9), 
+    Voo('a', 'd', 4), 
+    Voo('b', 'c', 7), 
+    Voo('b', 'e', 6),
+    Voo('b', 'f', 1),
+    Voo('c', 'f', 7), 
+    Voo('d', 'f', 4), 
+    Voo('d', 'g', 5), 
+    Voo('e', 'h', 9), 
+    Voo('f', 'h', 4),
+    Voo('g', 'h', 1)
 ]
 
 def busca_melhor_escolha(origem, destino):
-    caminho = []
-    custo_total = 0
+    fila = []
+    fila.append(Estado(origem, [], 0))
+    fechados = []
 
-    cidade_atual = origem
-    while cidade_atual != destino:
-        print("Cidade Atual: ", cidade_atual, "\n")            
-        print("Procurando novos destinos: ")
+    while fila:
+        print("\nFila: ", fila)
+        print("\nFechados: ", fechados, "\n")
+        e = fila.pop(0)
+        fechados.append(e)
 
-        opcoes = []
-        for (cidade_origem, cidade_destino, custo) in voos:
-            if (cidade_origem == cidade_atual):
-                print(f"\tEncontrado voo de {cidade_origem} até {cidade_destino}")
+        print("Melhor escolha: ", e, "\n")
+        if (e.cidade == destino):
+            return e.caminho + [e.cidade], e.custo_acumulado
+    
 
-                if (cidade_destino not in caminho):
-                    print(f"\t\tVoo adicionado às possibilidades: {cidade_origem, cidade_destino, custo}")
-                    opcoes.append((cidade_origem, cidade_destino, custo))
-                else:
-                    print(f"\t\tCidade {cidade_destino} já foi visitada")
+        for voo in voos:
+            if voo.origem == e.cidade and voo.destino not in e.caminho:
+                novo_estado = Estado(
+                    voo.destino, 
+                    e.caminho + [e.cidade], 
+                    e.custo_acumulado + voo.custo
+                )
+                fila.append(novo_estado)
 
-        if (not opcoes):
-            print("Chegou em um beco sem saída, fim do algoritmo.")
-            return None, 0
-        
-        print("\n\tPossíveis caminhos: ", opcoes)
+        fila.sort(key=lambda e: e.custo_acumulado)
 
-        melhor_escolha = min(opcoes, key = lambda t: t[2])
-        print("\tMelhor escolha: ", melhor_escolha, '\n')
 
-        caminho += [cidade_atual]
-        custo_total += melhor_escolha[2]
-        cidade_atual = melhor_escolha[1]
+        # fila.remove((e, caminho, custo_atual))
+        # fechados.append((e, caminho, custo_atual))
+
+        # cidade_atual = e[0]
+        # custo_atual += e[1]
+
+       
+        # print("Procurando novos destinos: ")
+
+        # for (cidade_origem, cidade_destino, custo) in voos:
+        #     if (cidade_origem == cidade_atual):
+        #         print(f"\tEncontrado voo de {cidade_origem} até {cidade_destino}")
+
+        #         if ((cidade_destino, custo) not in fila + fechados):
+        #             print(f"\t\tVoo adicionado à fila: {cidade_origem, cidade_destino, custo}")
+        #             fila.append(((cidade_destino, custo), caminho + [cidade_atual], custo_atual))
+        #         else:
+        #             print(f"\t\tCidade {cidade_destino, custo} já está na fila")
     else:
-        print("Objetivo encontrado!\n")
-        return caminho + [cidade_atual], custo_total
+        print("Objetivo Inalcançável\n")
+        return None
     
 origem = 'a'
 destino = 'h'

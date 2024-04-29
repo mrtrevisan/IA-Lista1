@@ -1,39 +1,37 @@
-Cidade Atual:  a 
 
-Procurando novos destinos: 
-	Encontrado voo de a até b
-		Voo adicionado às possibilidades: ('a', 'b', 1)
-	Encontrado voo de a até c
-		Voo adicionado às possibilidades: ('a', 'c', 9)
-	Encontrado voo de a até d
-		Voo adicionado às possibilidades: ('a', 'd', 4)
+Fila:  [[a, [], 0]]
 
-	Possíveis caminhos:  [('a', 'b', 1), ('a', 'c', 9), ('a', 'd', 4)]
-	Melhor escolha:  ('a', 'b', 1) 
+Fechados:  [] 
 
-Cidade Atual:  b 
+Melhor escolha:  [a, [], 0] 
 
-Procurando novos destinos: 
-	Encontrado voo de b até c
-		Voo adicionado às possibilidades: ('b', 'c', 7)
-	Encontrado voo de b até e
-		Voo adicionado às possibilidades: ('b', 'e', 6)
-	Encontrado voo de b até f
-		Voo adicionado às possibilidades: ('b', 'f', 1)
 
-	Possíveis caminhos:  [('b', 'c', 7), ('b', 'e', 6), ('b', 'f', 1)]
-	Melhor escolha:  ('b', 'f', 1) 
+Fila:  [[b, ['a'], 1], [d, ['a'], 4], [c, ['a'], 9]]
 
-Cidade Atual:  f 
+Fechados:  [[a, [], 0]] 
 
-Procurando novos destinos: 
-	Encontrado voo de f até h
-		Voo adicionado às possibilidades: ('f', 'h', 4)
+Melhor escolha:  [b, ['a'], 1] 
 
-	Possíveis caminhos:  [('f', 'h', 4)]
-	Melhor escolha:  ('f', 'h', 4) 
 
-Objetivo encontrado!
+Fila:  [[f, ['a', 'b'], 2], [d, ['a'], 4], [e, ['a', 'b'], 7], [c, ['a', 'b'], 8], [c, ['a'], 9]]
+
+Fechados:  [[a, [], 0], [b, ['a'], 1]] 
+
+Melhor escolha:  [f, ['a', 'b'], 2] 
+
+
+Fila:  [[d, ['a'], 4], [h, ['a', 'b', 'f'], 6], [e, ['a', 'b'], 7], [c, ['a', 'b'], 8], [c, ['a'], 9]]
+
+Fechados:  [[a, [], 0], [b, ['a'], 1], [f, ['a', 'b'], 2]] 
+
+Melhor escolha:  [d, ['a'], 4] 
+
+
+Fila:  [[h, ['a', 'b', 'f'], 6], [e, ['a', 'b'], 7], [c, ['a', 'b'], 8], [f, ['a', 'd'], 8], [c, ['a'], 9], [g, ['a', 'd'], 9]]
+
+Fechados:  [[a, [], 0], [b, ['a'], 1], [f, ['a', 'b'], 2], [d, ['a'], 4]] 
+
+Melhor escolha:  [h, ['a', 'b', 'f'], 6] 
 
 Caminho encontrado de a para h!
 a -> b -> f -> h
