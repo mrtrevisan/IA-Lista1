@@ -63,26 +63,7 @@ def busca_melhor_escolha(origem, destino):
                 fila.append(novo_estado)
 
         fila.sort(key=lambda e: e.custo_acumulado)
-
-
-        # fila.remove((e, caminho, custo_atual))
-        # fechados.append((e, caminho, custo_atual))
-
-        # cidade_atual = e[0]
-        # custo_atual += e[1]
-
-       
-        # print("Procurando novos destinos: ")
-
-        # for (cidade_origem, cidade_destino, custo) in voos:
-        #     if (cidade_origem == cidade_atual):
-        #         print(f"\tEncontrado voo de {cidade_origem} até {cidade_destino}")
-
-        #         if ((cidade_destino, custo) not in fila + fechados):
-        #             print(f"\t\tVoo adicionado à fila: {cidade_origem, cidade_destino, custo}")
-        #             fila.append(((cidade_destino, custo), caminho + [cidade_atual], custo_atual))
-        #         else:
-        #             print(f"\t\tCidade {cidade_destino, custo} já está na fila")
+        
     else:
         print("Objetivo Inalcançável\n")
         return None

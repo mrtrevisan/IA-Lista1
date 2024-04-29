@@ -74,7 +74,6 @@ def busca_melhor_escolha(origem, destino):
         print("Objetivo Inalcançável\n")
         return None
 
-# Execução
 origem = 'a'
 destino = 'k'
 caminho = busca_melhor_escolha(origem, destino)

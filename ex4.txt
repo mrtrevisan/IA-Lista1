@@ -1,3 +1,4 @@
+Pela busca em largura: 
 
 Fila:  [('a', [])]
 
@@ -73,6 +74,52 @@ Procurando novos destinos:
 Fila:  [('j', ['a', 'd']), ('k', ['a', 'b', 'e']), ('l', ['a', 'b', 'e'])]
 
 Fechados:  [('a', []), ('b', ['a']), ('d', ['a']), ('e', ['a', 'b']), ('f', ['a', 'b'])] 
+
+Cidade Atual:  j 
+
+Objetivo encontrado!
+
+Caminho encontrado de a para j!
+a -> d -> j
+
+====================================================
+====================================================
+
+Pela busca em profundidade: 
+
+Fila:  [('a', [])]
+
+Fechados:  [] 
+
+Cidade Atual:  a 
+
+Procurando novos destinos: 
+	Encontrado voo de a até b
+		Enfileirando cidade: b
+	Encontrado voo de a até b
+		Cidade b já foi visitada ou já está na fila.
+	Encontrado voo de a até d
+		Enfileirando cidade: d
+
+-----
+-----
+
+Fila:  [('d', ['a']), ('b', ['a'])]
+
+Fechados:  [('a', [])] 
+
+Cidade Atual:  d 
+
+Procurando novos destinos: 
+	Encontrado voo de d até j
+		Enfileirando cidade: j
+
+-----
+-----
+
+Fila:  [('j', ['a', 'd']), ('b', ['a'])]
+
+Fechados:  [('a', []), ('d', ['a'])] 
 
 Cidade Atual:  j 
 

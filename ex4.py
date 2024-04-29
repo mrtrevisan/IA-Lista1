@@ -20,7 +20,7 @@ voos = {
     19: ('n', 'b')
 }
 
-def busca_largura(origem, destino):
+def busca(modo, origem, destino):
     fila = []
     fila.append((origem, []))
     fechados = []
@@ -43,9 +43,12 @@ def busca_largura(origem, destino):
             if (cidade_origem == c):
                 print(f"\tEncontrado voo de {cidade_origem} até {cidade_destino}")
 
-                if (cidade_destino not in caminho and cidade_destino not in [tupla[0] for tupla in fila + fechados]):
+                if (cidade_destino not in caminho and cidade_destino not in [t[0] for t in fila + fechados]):
                     print(f"\t\tEnfileirando cidade: {cidade_destino}")
-                    fila.append((cidade_destino, caminho + [c]))
+                    if modo == 'largura':
+                        fila.append((cidade_destino, caminho + [c]))
+                    if modo == 'profundidade':
+                        fila.insert(0, (cidade_destino, caminho + [c]))
                 else:
                     print(f"\t\tCidade {cidade_destino} já foi visitada ou já está na fila.")
         print("\n-----")
@@ -55,7 +58,21 @@ def busca_largura(origem, destino):
     
 origem = 'a'
 destino = 'j'
-caminho = busca_largura(origem, destino)
+
+print("Pela busca em largura: ")
+caminho = busca('largura', origem, destino)
+
+if caminho:
+    print(f"Caminho encontrado de {origem} para {destino}!")
+    print(f"{' -> '.join(caminho)}")
+else:
+    print(f"Não há caminho possível")
+
+print("\n====================================================")
+print("====================================================\n")
+
+print("Pela busca em profundidade: ")
+caminho = busca('profundidade', origem, destino)
 
 if caminho:
     print(f"Caminho encontrado de {origem} para {destino}!")

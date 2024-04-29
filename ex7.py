@@ -46,9 +46,9 @@ heuristica = {
 def h(x, c):
     return heuristica[x] + c
 
-def busca_melhor_escolha(origem, destino):
+def busca_a_estrela(origem, destino):
     fila = []
-    fila.append((Estado(origem, [], 0), 0))
+    fila.append((Estado(origem, [], 0), h(origem, 0)))
     fechados = []
 
     while fila:
@@ -79,7 +79,7 @@ def busca_melhor_escolha(origem, destino):
 # Execução
 origem = 'a'
 destino = 'k'
-caminho = busca_melhor_escolha(origem, destino)
+caminho = busca_a_estrela(origem, destino)
 
 if caminho:
     print(f"Caminho encontrado de {origem} para {destino}.")
