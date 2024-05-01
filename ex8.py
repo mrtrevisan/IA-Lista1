@@ -62,7 +62,7 @@ def a_star(estado_inicial):
         for next in gen_next(e):
             if next not in [t[0] for t in fechados + fila]:
                 fila.append((next, custo+1, h(next, custo+1)))
-                print(f"\t\t{next} adicionado à fila")
+                print(f"\t\t{next} adicionado à fila, heurística: {h(next, custo+1)}")
 
         fila.sort(key=lambda t : t[2])
 
@@ -88,7 +88,7 @@ def melhor_esc_heur(estado_inicial):
         for next in gen_next(e):
             if next not in [t[0] for t in fechados + fila]:
                 fila.append((next, h(next, 0)))
-                print(f"\t\t{next} adicionado à fila")
+                print(f"\t\t{next} adicionado à fila, heurística: {h(next, 0)}")
 
         fila.sort(key=lambda t : t[1])
 
