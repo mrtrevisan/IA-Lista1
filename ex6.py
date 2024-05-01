@@ -1,7 +1,8 @@
 class Estado:
-    def __init__(self, cidade, caminho):
+    def __init__(self, cidade, caminho, custo_acumulado):
         self.cidade = cidade
         self.caminho = caminho
+        self.custo_acumulado = custo_acumulado
 
     def __str__(self):
         return f"[{self.cidade}, {self.caminho}]"
@@ -47,7 +48,7 @@ def h(x):
 
 def busca_melhor_escolha(origem, destino):
     fila = []
-    fila.append((Estado(origem, []), 0))
+    fila.append((Estado(origem, [], 0), h(origem)))
     fechados = []
 
     while fila:
@@ -58,29 +59,30 @@ def busca_melhor_escolha(origem, destino):
 
         print("Melhor escolha: ", e, " Heurística: ", heur, "\n")
         if (e.cidade == destino):
-            return e.caminho + [e.cidade]
+            return e.caminho + [e.cidade], e.custo_acumulado
     
-
         for r in rotas:
             if r.origem == e.cidade and r.destino not in e.caminho:
                 novo_estado = Estado(
                     r.destino, 
-                    e.caminho + [e.cidade], 
+                    e.caminho + [e.cidade],
+                    e.custo_acumulado + r.custo 
                 )
                 fila.append((novo_estado, h(r.destino)))
 
         fila.sort(key=lambda t : t[1])
     else:
         print("Objetivo Inalcançável\n")
-        return None
+        return None, 0
 
 origem = 'a'
 destino = 'k'
-caminho = busca_melhor_escolha(origem, destino)
+caminho, custo = busca_melhor_escolha(origem, destino)
 
 if caminho:
     print(f"Caminho encontrado de {origem} para {destino}.")
     print(f"{' -> '.join(caminho)}")
+    print(f"Custo: {custo}")
 
 else:
     print(f"Não existe caminho de {origem} para {destino}.")

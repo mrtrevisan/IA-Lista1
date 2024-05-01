@@ -59,7 +59,7 @@ def busca_a_estrela(origem, destino):
 
         print("Melhor escolha: ", e, " Heurística: ", heur, "\n")
         if (e.cidade == destino):
-            return e.caminho + [e.cidade]
+            return e.caminho + [e.cidade], e.custo_acumulado
     
 
         for r in rotas:
@@ -79,11 +79,12 @@ def busca_a_estrela(origem, destino):
 # Execução
 origem = 'a'
 destino = 'k'
-caminho = busca_a_estrela(origem, destino)
+caminho, custo = busca_a_estrela(origem, destino)
 
 if caminho:
     print(f"Caminho encontrado de {origem} para {destino}.")
     print(f"{' -> '.join(caminho)}")
+    print(f"Custo: {custo}")
 
 else:
     print(f"Não existe caminho de {origem} para {destino}.")

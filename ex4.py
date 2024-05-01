@@ -68,8 +68,7 @@ if caminho:
 else:
     print(f"Não há caminho possível")
 
-print("\n====================================================")
-print("====================================================\n")
+print("\n========================================================================================================\n")
 
 print("Pela busca em profundidade: ")
 caminho = busca('profundidade', origem, destino)

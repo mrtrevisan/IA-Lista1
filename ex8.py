@@ -68,6 +68,57 @@ def a_star(estado_inicial):
 
     return None
 
+# Algoritmo Melhor Escolha com heuristica
+
+def melhor_esc_heur(estado_inicial):
+    fila = [(estado_inicial, h(estado_inicial, 0))]
+    fechados = []
+
+    while fila:
+        print("\nFila: ", fila)
+        print("\nFechados: ", fechados, "\n")
+        e, heur = fila.pop(0)
+        fechados.append((e, heur))
+
+        print("\tMelhor escolha: ", e, " Heurística: ", heur, "\n")
+
+        if (e == objetivo):
+            return e
+        
+        for next in gen_next(e):
+            if next not in [t[0] for t in fechados + fila]:
+                fila.append((next, h(next, 0)))
+                print(f"\t\t{next} adicionado à fila")
+
+        fila.sort(key=lambda t : t[1])
+
+    return None
+
+# Algoritmo Melhor Escolha
+def melhor_escolha(estado_inicial):
+    fila = [(estado_inicial, 0)]
+    fechados = []
+
+    while fila:
+        print("\nFila: ", fila)
+        print("\nFechados: ", fechados, "\n")
+        e, custo = fila.pop(0)
+        fechados.append((e, custo))
+
+        print("\tMelhor escolha: ", e, " Custo: ", custo, "\n")
+
+        if (e == objetivo):
+            return e
+        
+        for next in gen_next(e):
+            if next not in [t[0] for t in fechados + fila]:
+                fila.append((next, custo+1))
+                print(f"\t\t{next} adicionado à fila")
+
+        fila.sort(key=lambda t : t[1])
+
+    return None
+
 # Estado inicial
 inicial = [
     [  1, 2, 3],
@@ -82,10 +133,36 @@ objetivo = [
     [7,  6,  5]
 ]
 
+print("Pelo algoritmo A*: ")
+
 # Algoritmo A*
 solution = a_star(inicial)
+if solution:
+    print("Solução encontrada:")
+    for row in solution:
+        print(row)
+else:
+    print("Não foi encontrada uma solução.")
 
-# Imprime a solução
+print("\n========================================================================================================\n")
+
+print("Pelo algoritmo Melhor Escolha: ")
+
+# Melhor escolha
+solution = melhor_escolha(inicial)
+if solution:
+    print("Solução encontrada:")
+    for row in solution:
+        print(row)
+else:
+    print("Não foi encontrada uma solução.")
+
+print("\n========================================================================================================\n")
+
+print("Pelo algoritmo Melhor Escolha com heurística: ")
+
+# Melhor escolha heuristica
+solution = melhor_esc_heur(inicial)
 if solution:
     print("Solução encontrada:")
     for row in solution:

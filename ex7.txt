@@ -35,3 +35,4 @@ Melhor escolha:  [k, ['a', 'b', 'i'], 16]  Heurística:  16
 
 Caminho encontrado de a para k.
 a -> b -> i -> k
+Custo: 16
