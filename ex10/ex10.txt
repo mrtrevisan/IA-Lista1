@@ -1,0 +1,148 @@
+
+Rodada do Max
+
+	Expandido estado [Palitos: 4, Turno: Min]
+
+Rodada do Min
+
+	Expandido estado [Palitos: 3, Turno: Max]
+
+Rodada do Max
+
+	Expandido estado [Palitos: 2, Turno: Min]
+
+Rodada do Min
+
+	Expandido estado [Palitos: 1, Turno: Max]
+
+Rodada do Max
+
+	Expandido estado [Palitos: 0, Turno: Min]
+	Comparando -1 com -inf
+	Alfa agora é -1
+
+	Comparando -1 com inf
+	Beta agora é -1
+
+	Expandido estado [Palitos: 0, Turno: Max]
+	Comparando 1 com -1
+	Beta agora é -1
+
+	Comparando -1 com -inf
+	Alfa agora é -1
+
+	Expandido estado [Palitos: 1, Turno: Min]
+
+Rodada do Min
+
+	Expandido estado [Palitos: 0, Turno: Max]
+	Comparando 1 com inf
+	Beta agora é 1
+
+	Comparando 1 com -1
+	Alfa agora é 1
+
+	Expandido estado [Palitos: 0, Turno: Min]
+	Comparando -1 com 1
+	Alfa agora é 1
+
+	Comparando 1 com inf
+	Beta agora é 1
+
+	Expandido estado [Palitos: 2, Turno: Max]
+
+Rodada do Max
+
+	Expandido estado [Palitos: 1, Turno: Min]
+
+Rodada do Min
+
+	Expandido estado [Palitos: 0, Turno: Max]
+	Comparando 1 com inf
+	Beta agora é 1
+
+	Comparando 1 com -inf
+	Alfa agora é 1
+		Poda
+
+
+	Comparando 1 com 1
+	Beta agora é 1
+
+	Expandido estado [Palitos: 1, Turno: Max]
+
+Rodada do Max
+
+	Expandido estado [Palitos: 0, Turno: Min]
+	Comparando -1 com -inf
+	Alfa agora é -1
+
+	Comparando -1 com 1
+	Beta agora é -1
+
+	Comparando -1 com -inf
+	Alfa agora é -1
+
+	Expandido estado [Palitos: 3, Turno: Min]
+
+Rodada do Min
+
+	Expandido estado [Palitos: 2, Turno: Max]
+
+Rodada do Max
+
+	Expandido estado [Palitos: 1, Turno: Min]
+
+Rodada do Min
+
+	Expandido estado [Palitos: 0, Turno: Max]
+	Comparando 1 com inf
+	Beta agora é 1
+
+	Comparando 1 com -inf
+	Alfa agora é 1
+
+	Expandido estado [Palitos: 0, Turno: Min]
+	Comparando -1 com 1
+	Alfa agora é 1
+
+	Comparando 1 com inf
+	Beta agora é 1
+
+	Expandido estado [Palitos: 1, Turno: Max]
+
+Rodada do Max
+
+	Expandido estado [Palitos: 0, Turno: Min]
+	Comparando -1 com -inf
+	Alfa agora é -1
+
+	Comparando -1 com 1
+	Beta agora é -1
+		Poda
+
+
+	Comparando -1 com -1
+	Alfa agora é -1
+
+	Expandido estado [Palitos: 2, Turno: Min]
+
+Rodada do Min
+
+	Expandido estado [Palitos: 1, Turno: Max]
+
+Rodada do Max
+
+	Expandido estado [Palitos: 0, Turno: Min]
+	Comparando -1 com -inf
+	Alfa agora é -1
+
+	Comparando -1 com inf
+	Beta agora é -1
+		Poda
+
+
+	Comparando -1 com -1
+	Alfa agora é -1
+
+Max não pode ganhar.

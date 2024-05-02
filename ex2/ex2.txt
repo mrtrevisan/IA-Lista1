@@ -1,0 +1,212 @@
+
+Fila:  [[0, 0]]
+
+Fechados:  [] 
+
+Abrindo Estado:  [0, 0] 
+
+Gerando estados filhos: 
+	Enfileirando estado: [3, 0]
+	Enfileirando estado: [0, 4]
+
+-----
+-----
+
+Fila:  [[3, 0], [0, 4]]
+
+Fechados:  [[0, 0]] 
+
+Abrindo Estado:  [3, 0] 
+
+Gerando estados filhos: 
+	Enfileirando estado: [3, 4]
+	[0, 0] já está na fila: 
+	Enfileirando estado: [0, 3]
+
+-----
+-----
+
+Fila:  [[0, 4], [3, 4], [0, 3]]
+
+Fechados:  [[0, 0], [3, 0]] 
+
+Abrindo Estado:  [0, 4] 
+
+Gerando estados filhos: 
+	[3, 4] já está na fila: 
+	[0, 0] já está na fila: 
+	Enfileirando estado: [3, 1]
+
+-----
+-----
+
+Fila:  [[3, 4], [0, 3], [3, 1]]
+
+Fechados:  [[0, 0], [3, 0], [0, 4]] 
+
+Abrindo Estado:  [3, 4] 
+
+Gerando estados filhos: 
+	[0, 4] já está na fila: 
+	[3, 0] já está na fila: 
+
+-----
+-----
+
+Fila:  [[0, 3], [3, 1]]
+
+Fechados:  [[0, 0], [3, 0], [0, 4], [3, 4]] 
+
+Abrindo Estado:  [0, 3] 
+
+Gerando estados filhos: 
+	Enfileirando estado: [3, 3]
+	[0, 4] já está na fila: 
+	[0, 0] já está na fila: 
+	[3, 0] já está na fila: 
+
+-----
+-----
+
+Fila:  [[3, 1], [3, 3]]
+
+Fechados:  [[0, 0], [3, 0], [0, 4], [3, 4], [0, 3]] 
+
+Abrindo Estado:  [3, 1] 
+
+Gerando estados filhos: 
+	[3, 4] já está na fila: 
+	Enfileirando estado: [0, 1]
+	[3, 0] já está na fila: 
+	[0, 4] já está na fila: 
+
+-----
+-----
+
+Fila:  [[3, 3], [0, 1]]
+
+Fechados:  [[0, 0], [3, 0], [0, 4], [3, 4], [0, 3], [3, 1]] 
+
+Abrindo Estado:  [3, 3] 
+
+Gerando estados filhos: 
+	[3, 4] já está na fila: 
+	[0, 3] já está na fila: 
+	[3, 0] já está na fila: 
+	Enfileirando estado: [2, 4]
+
+-----
+-----
+
+Fila:  [[0, 1], [2, 4]]
+
+Fechados:  [[0, 0], [3, 0], [0, 4], [3, 4], [0, 3], [3, 1], [3, 3]] 
+
+Abrindo Estado:  [0, 1] 
+
+Gerando estados filhos: 
+	[3, 1] já está na fila: 
+	[0, 4] já está na fila: 
+	[0, 0] já está na fila: 
+	Enfileirando estado: [1, 0]
+
+-----
+-----
+
+Fila:  [[2, 4], [1, 0]]
+
+Fechados:  [[0, 0], [3, 0], [0, 4], [3, 4], [0, 3], [3, 1], [3, 3], [0, 1]] 
+
+Abrindo Estado:  [2, 4] 
+
+Gerando estados filhos: 
+	[3, 4] já está na fila: 
+	[0, 4] já está na fila: 
+	Enfileirando estado: [2, 0]
+	[3, 3] já está na fila: 
+
+-----
+-----
+
+Fila:  [[1, 0], [2, 0]]
+
+Fechados:  [[0, 0], [3, 0], [0, 4], [3, 4], [0, 3], [3, 1], [3, 3], [0, 1], [2, 4]] 
+
+Abrindo Estado:  [1, 0] 
+
+Gerando estados filhos: 
+	[3, 0] já está na fila: 
+	Enfileirando estado: [1, 4]
+	[0, 0] já está na fila: 
+	[0, 1] já está na fila: 
+
+-----
+-----
+
+Fila:  [[2, 0], [1, 4]]
+
+Fechados:  [[0, 0], [3, 0], [0, 4], [3, 4], [0, 3], [3, 1], [3, 3], [0, 1], [2, 4], [1, 0]] 
+
+Abrindo Estado:  [2, 0] 
+
+Gerando estados filhos: 
+	[3, 0] já está na fila: 
+	[2, 4] já está na fila: 
+	[0, 0] já está na fila: 
+	Enfileirando estado: [0, 2]
+
+-----
+-----
+
+Fila:  [[1, 4], [0, 2]]
+
+Fechados:  [[0, 0], [3, 0], [0, 4], [3, 4], [0, 3], [3, 1], [3, 3], [0, 1], [2, 4], [1, 0], [2, 0]] 
+
+Abrindo Estado:  [1, 4] 
+
+Gerando estados filhos: 
+	[3, 4] já está na fila: 
+	[0, 4] já está na fila: 
+	[1, 0] já está na fila: 
+	Enfileirando estado: [3, 2]
+
+-----
+-----
+
+Fila:  [[0, 2], [3, 2]]
+
+Fechados:  [[0, 0], [3, 0], [0, 4], [3, 4], [0, 3], [3, 1], [3, 3], [0, 1], [2, 4], [1, 0], [2, 0], [1, 4]] 
+
+Abrindo Estado:  [0, 2] 
+
+Objetivo encontrado!
+
+Caminho para solução:
+Passo 1:
+Volume de líquido no jarro 1: 0
+Volume de líquido no jarro 2: 0
+
+Passo 2:
+Volume de líquido no jarro 1: 3
+Volume de líquido no jarro 2: 0
+
+Passo 3:
+Volume de líquido no jarro 1: 0
+Volume de líquido no jarro 2: 3
+
+Passo 4:
+Volume de líquido no jarro 1: 3
+Volume de líquido no jarro 2: 3
+
+Passo 5:
+Volume de líquido no jarro 1: 2
+Volume de líquido no jarro 2: 4
+
+Passo 6:
+Volume de líquido no jarro 1: 2
+Volume de líquido no jarro 2: 0
+
+Passo 7:
+Volume de líquido no jarro 1: 0
+Volume de líquido no jarro 2: 2
+

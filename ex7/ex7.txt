@@ -1,0 +1,38 @@
+
+Fila:  [([a, [], 0], 15)]
+
+Fechados:  [] 
+
+Melhor escolha:  [a, [], 0]  Heurística:  15 
+
+
+Fila:  [([b, ['a'], 7], 14), ([c, ['a'], 9], 15), ([d, ['a'], 3], 17)]
+
+Fechados:  [([a, [], 0], 15)] 
+
+Melhor escolha:  [b, ['a'], 7]  Heurística:  14 
+
+
+Fila:  [([c, ['a'], 9], 15), ([i, ['a', 'b'], 11], 16), ([d, ['a'], 3], 17), ([f, ['a', 'b'], 10], 17)]
+
+Fechados:  [([a, [], 0], 15), ([b, ['a'], 7], 14)] 
+
+Melhor escolha:  [c, ['a'], 9]  Heurística:  15 
+
+
+Fila:  [([i, ['a', 'b'], 11], 16), ([d, ['a'], 3], 17), ([f, ['a', 'b'], 10], 17), ([j, ['a', 'c'], 14], 17)]
+
+Fechados:  [([a, [], 0], 15), ([b, ['a'], 7], 14), ([c, ['a'], 9], 15)] 
+
+Melhor escolha:  [i, ['a', 'b'], 11]  Heurística:  16 
+
+
+Fila:  [([k, ['a', 'b', 'i'], 16], 16), ([d, ['a'], 3], 17), ([f, ['a', 'b'], 10], 17), ([j, ['a', 'c'], 14], 17)]
+
+Fechados:  [([a, [], 0], 15), ([b, ['a'], 7], 14), ([c, ['a'], 9], 15), ([i, ['a', 'b'], 11], 16)] 
+
+Melhor escolha:  [k, ['a', 'b', 'i'], 16]  Heurística:  16 
+
+Caminho encontrado de a para k.
+a -> b -> i -> k
+Custo: 16

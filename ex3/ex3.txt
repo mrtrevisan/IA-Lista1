@@ -1,0 +1,163 @@
+
+Fila:  [[e, e, e, e]]
+
+Fechados:  [] 
+
+Abrindo Estado:  [e, e, e, e] 
+
+Gerando estados filhos: 
+	Enfileirando estado: [d, e, d, e]
+
+-----
+-----
+
+Fila:  [[d, e, d, e]]
+
+Fechados:  [[e, e, e, e]] 
+
+Abrindo Estado:  [d, e, d, e] 
+
+Gerando estados filhos: 
+	Enfileirando estado: [e, e, d, e]
+	[e, e, e, e] já está na fila: 
+
+-----
+-----
+
+Fila:  [[e, e, d, e]]
+
+Fechados:  [[e, e, e, e], [d, e, d, e]] 
+
+Abrindo Estado:  [e, e, d, e] 
+
+Gerando estados filhos: 
+	[d, e, d, e] já está na fila: 
+	Enfileirando estado: [d, d, d, e]
+	Enfileirando estado: [d, e, d, d]
+
+-----
+-----
+
+Fila:  [[d, e, d, d], [d, d, d, e]]
+
+Fechados:  [[e, e, e, e], [d, e, d, e], [e, e, d, e]] 
+
+Abrindo Estado:  [d, e, d, d] 
+
+Gerando estados filhos: 
+	Enfileirando estado: [e, e, e, d]
+	[e, e, d, e] já está na fila: 
+
+-----
+-----
+
+Fila:  [[e, e, e, d], [d, d, d, e]]
+
+Fechados:  [[e, e, e, e], [d, e, d, e], [e, e, d, e], [d, e, d, d]] 
+
+Abrindo Estado:  [e, e, e, d] 
+
+Gerando estados filhos: 
+	Enfileirando estado: [d, d, e, d]
+	[d, e, d, d] já está na fila: 
+
+-----
+-----
+
+Fila:  [[d, d, e, d], [d, d, d, e]]
+
+Fechados:  [[e, e, e, e], [d, e, d, e], [e, e, d, e], [d, e, d, d], [e, e, e, d]] 
+
+Abrindo Estado:  [d, d, e, d] 
+
+Gerando estados filhos: 
+	Enfileirando estado: [e, d, e, d]
+	[e, e, e, d] já está na fila: 
+	Enfileirando estado: [e, d, e, e]
+
+-----
+-----
+
+Fila:  [[e, d, e, e], [e, d, e, d], [d, d, d, e]]
+
+Fechados:  [[e, e, e, e], [d, e, d, e], [e, e, d, e], [d, e, d, d], [e, e, e, d], [d, d, e, d]] 
+
+Abrindo Estado:  [e, d, e, e] 
+
+Gerando estados filhos: 
+	[d, d, d, e] já está na fila: 
+	[d, d, e, d] já está na fila: 
+
+-----
+-----
+
+Fila:  [[e, d, e, d], [d, d, d, e]]
+
+Fechados:  [[e, e, e, e], [d, e, d, e], [e, e, d, e], [d, e, d, d], [e, e, e, d], [d, d, e, d], [e, d, e, e]] 
+
+Abrindo Estado:  [e, d, e, d] 
+
+Gerando estados filhos: 
+	[d, d, e, d] já está na fila: 
+	Enfileirando estado: [d, d, d, d]
+
+-----
+-----
+
+Fila:  [[d, d, d, d], [d, d, d, e]]
+
+Fechados:  [[e, e, e, e], [d, e, d, e], [e, e, d, e], [d, e, d, d], [e, e, e, d], [d, d, e, d], [e, d, e, e], [e, d, e, d]] 
+
+Abrindo Estado:  [d, d, d, d] 
+
+Objetivo encontrado!
+
+Caminho para solução:
+Passo 1:
+Posição do Fazendeiro: Esquerda
+Posição do Lobo: Esquerda
+Posição da Ovelha: Esquerda
+Posição do Repolho: Esquerda
+
+Passo 2:
+Posição do Fazendeiro: Direita
+Posição do Lobo: Esquerda
+Posição da Ovelha: Direita
+Posição do Repolho: Esquerda
+
+Passo 3:
+Posição do Fazendeiro: Esquerda
+Posição do Lobo: Esquerda
+Posição da Ovelha: Direita
+Posição do Repolho: Esquerda
+
+Passo 4:
+Posição do Fazendeiro: Direita
+Posição do Lobo: Esquerda
+Posição da Ovelha: Direita
+Posição do Repolho: Direita
+
+Passo 5:
+Posição do Fazendeiro: Esquerda
+Posição do Lobo: Esquerda
+Posição da Ovelha: Esquerda
+Posição do Repolho: Direita
+
+Passo 6:
+Posição do Fazendeiro: Direita
+Posição do Lobo: Direita
+Posição da Ovelha: Esquerda
+Posição do Repolho: Direita
+
+Passo 7:
+Posição do Fazendeiro: Esquerda
+Posição do Lobo: Direita
+Posição da Ovelha: Esquerda
+Posição do Repolho: Direita
+
+Passo 8:
+Posição do Fazendeiro: Direita
+Posição do Lobo: Direita
+Posição da Ovelha: Direita
+Posição do Repolho: Direita
+

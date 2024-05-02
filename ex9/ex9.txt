@@ -1,0 +1,145 @@
+
+Profundidade: 0
+	Rodada do Max
+		Alfa: -inf 
+		Beta: inf
+
+Profundidade: 1
+	Rodada do Min
+		Alfa: -inf 
+		Beta: inf
+
+Profundidade: 2
+	Rodada do Max
+		Alfa: -inf 
+		Beta: inf
+
+Profundidade: 3
+	Rodada do Min
+		Alfa: -inf 
+		Beta: inf
+
+Profundidade: 4
+		Comparando 20 com inf
+		Beta agora é -inf
+
+		Alfa: -inf 
+		Beta: 20
+
+Profundidade: 4
+		Comparando 33 com 20
+		Beta agora é -inf
+
+		Comparando 20 com -inf
+		Alfa agora é 20
+
+		Alfa: 20 
+		Beta: inf
+
+Profundidade: 3
+	Rodada do Min
+		Alfa: 20 
+		Beta: inf
+
+Profundidade: 4
+		Comparando -45 com inf
+		Beta agora é 20
+		Poda
+
+		Comparando -45 com 20
+		Alfa agora é 20
+
+		Comparando 20 com inf
+		Beta agora é -inf
+
+		Alfa: -inf 
+		Beta: 20
+
+Profundidade: 2
+	Rodada do Max
+		Alfa: -inf 
+		Beta: 20
+
+Profundidade: 3
+	Rodada do Min
+		Alfa: -inf 
+		Beta: 20
+
+Profundidade: 4
+		Comparando 24 com inf
+		Beta agora é -inf
+
+		Alfa: -inf 
+		Beta: 20
+
+Profundidade: 4
+		Comparando 25 com 24
+		Beta agora é -inf
+
+		Comparando 24 com -inf
+		Alfa agora é 24
+		Poda
+
+		Comparando 24 com 20
+		Beta agora é -inf
+
+		Comparando 20 com -inf
+		Alfa agora é 20
+
+		Alfa: 20 
+		Beta: inf
+
+Profundidade: 1
+	Rodada do Min
+		Alfa: 20 
+		Beta: inf
+
+Profundidade: 2
+	Rodada do Max
+		Alfa: 20 
+		Beta: inf
+
+Profundidade: 3
+	Rodada do Min
+		Alfa: 20 
+		Beta: inf
+
+Profundidade: 4
+		Comparando 40 com inf
+		Beta agora é 20
+
+		Alfa: 20 
+		Beta: 40
+
+Profundidade: 4
+		Comparando -25 com 40
+		Beta agora é 20
+		Poda
+
+		Comparando -25 com -inf
+		Alfa agora é 20
+
+		Alfa: 20 
+		Beta: inf
+
+Profundidade: 3
+	Rodada do Min
+		Alfa: 20 
+		Beta: inf
+
+Profundidade: 4
+		Comparando 18 com inf
+		Beta agora é 20
+		Poda
+
+		Comparando 18 com -25
+		Alfa agora é 20
+
+		Comparando 18 com inf
+		Beta agora é 20
+		Poda
+
+		Comparando 18 com 20
+		Alfa agora é 20
+
+O melhor valor é : 20
